@@ -6,3 +6,4 @@ def getInfomation_nodeal(addr):
 def getInfomation(addr):
     text = pytesseract.image_to_string(Image.open("D:\\zhaoyq\\screen\\"+addr+"1.png"), lang='chi_sim')
     return text
+

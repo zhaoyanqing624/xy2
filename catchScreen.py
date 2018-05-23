@@ -22,3 +22,4 @@ def catchScreenTest(x,y,w,h):
 # # im = im.resize((400, 200),Image.ANTIALIAS)
 # im.show()
 # im.save('D:\\zhaoyq\\train\\faction\\answer_2.png')
+catchAllScreen()

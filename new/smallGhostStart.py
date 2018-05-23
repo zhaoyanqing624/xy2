@@ -20,6 +20,7 @@ def smallGhostStart():
         autopy.key.toggle('5', False, autopy.key.MOD_ALT)
         fiter.moveAndClick(388 + random.randint(0, 10), 336)
         catchScreen.catchAllScreen()
+        time.sleep(1)
         attr = getOffset.getOffsetValue_smallGhostMove()
         if(attr=="none"):
             print("不需要移动")
@@ -46,8 +47,8 @@ def smallGhostStart():
                         dealScreen.dealPicture_NPC("smallGhost")
                         attr33 = getOffset.getOffsetValue_NPC("smallGhost", "zhongkui")
                         if(isinstance(attr33,list)):
-                            x = attr33[0] + random.randint(0, 5) + 200
-                            y = attr33[1] + random.randint(-10, 10) + 200 - 50 + 10
+                            x = attr33[0] + random.randint(0, 5) + 200-20
+                            y = attr33[1] + random.randint(-10, 10) + 200 - 50
                             fiter.moveAndClick(x, y)
                             break
                     else:
@@ -87,6 +88,7 @@ def smallGhostStart():
         while True:
             print("是否点击开始任务")
             catchScreen.catchAllScreen()
+            time.sleep(1)
             attr_start = getOffset.getOffsetValue_smallGhostStart()
             if(isinstance(attr_start, list)):
                 fiter.moveAndClick(attr_start[0] + random.randint(-20, 20), attr_start[1])
@@ -118,13 +120,26 @@ def smallGhostStart():
         catchScreen.catchAllScreen()
         time.sleep(1)
         if(isinstance(getOffset.getOffsetValue_Box(), list)):
+            print("领取礼盒")
             time.sleep(0.5)
             attr5 = getOffset.getOffsetValue_Box()
-            fiter.moveAndClick(attr5[0]+random.randint(-10,10)+50, attr5[1]+50+random.randint(0,5))
-            time.sleep(30)
+            if(attr5[0]>900):
+                time.sleep(1)
+            else:
+                fiter.moveAndClick(attr5[0]+random.randint(-10,10)+50, attr5[1]+50+random.randint(0,5))
+                time.sleep(40)
         # 返回
-        time.sleep(0.5)
-        fiter.moveAndClick(793+random.randint(0,5), 528)
+        time.sleep(1)
+        print("点击回程")
+        catchScreen.catchAllScreen()
+        time.sleep(1)
+        if(isinstance(getOffset.taskRight(),list)):
+            time.sleep(0.5)
+            attr6 = getOffset.taskRight()
+            fiter.moveAndClick(attr6[0] + random.randint(0, 10)+30, attr6[1]-60 + random.randint(0, 10))
+        else:
+            fiter.moveAndClick(800 + random.randint(0, 10), 530+random.randint(0, 10))
+        time.sleep(1)
         i+=1
 
 def xuncha():
@@ -137,10 +152,31 @@ def xuncha():
         if (getInfoFromScreen.getInfomation("smallGhost\\1").find("捉") == -1):
             print("巡查")
             time.sleep(1)
-            getScreen.window_capture("D:\\zhaoyq\\screen\\allScreen.png")
-            dealScreen.dealPicture_NPC("smallGhost")
-            attr44 = getOffset.getOffsetValue_NPC("smallGhost", "zhongkui")
-            fiter.moveAndClick(attr44[0] + random.randint(10, 20) + 200-20, attr44[1] + random.randint(0, 10) + 200 - 50)
+            catchScreen.catchScreen(40, 65, 140, 85, "position1")
+            time.sleep(1)
+            dealScreen.dealScreen("position1")
+            time.sleep(1)
+            print(getInfoFromScreen.getInfomation("position1"))
+            if(getInfoFromScreen.getInfomation("position1").find("地府")!=-1):
+                print("巡查在地府")
+                while True:
+                    getScreen.window_capture("D:\\zhaoyq\\screen\\allScreen.png")
+                    dealScreen.dealPicture_NPC("smallGhost")
+                    attr44 = getOffset.getOffsetValue_NPC("smallGhost", "zhongkui")
+                    if (isinstance(attr44, list)):
+                        fiter.moveAndClick(attr44[0] + random.randint(10, 20) + 200 + 20,
+                                           attr44[1] + random.randint(0, 10) + 200 - 50)
+                        break
+            else:
+                print("巡查在长安")
+                while True:
+                    getScreen.window_capture("D:\\zhaoyq\\screen\\allScreen.png")
+                    dealScreen.dealPicture_NPC("smallGhost")
+                    attr45 = getOffset.getOffsetValue_NPC("smallGhost", "zhongkui2")
+                    if (isinstance(attr45, list)):
+                        fiter.moveAndClick(attr45[0] + random.randint(10, 20) + 200 - 20,
+                                           attr45[1] + random.randint(0, 10) + 200 - 50)
+                        break
             time.sleep(1)
             while True:
                 catchScreen.catchAllScreen()

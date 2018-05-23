@@ -4,9 +4,12 @@ import random
 import time
 import autopy3 as autopy
 import dealScreen
+import getInfoFromScreen
 import fiter
 from monkey import dealScreenMonkey as deal2
-# catchScreen.catchAllScreen()
+import getScreen
+catchScreen.catchAllScreen()
+# catchScreen.catchScreenTest(650,400,800,600)
 # deal2.dealMonkeyPicture()
 # 超级管家500, 260, 550, 350
 # catchScreen.catchScreen(40, 65, 140, 85, "test")
@@ -23,14 +26,17 @@ from monkey import dealScreenMonkey as deal2
 # attr = getOffset.getOffsetValue_Wupinlan()
 # print(attr)
 # attr2 = getOffset.getOffsetValue("home\\xiaoyao_2")
-# time.sleep(1)
+time.sleep(1)
 # catchScreen.catchScreenTest(10, 60, 100, 100)
 # dealScreen.dealScreen("allScreen")
 # dealScreen.dealScreen("home\\xiaoyao_user")
 # attr = getOffset.getOffsetValue("zidong")
 # print(attr)
 # fiter.moveAndClick(attr[0]-20,attr[1]-10)
-autopy.mouse.move(222, 333)
+
+catchScreen.catchScreen(40, 65, 140, 85, "position1")
+dealScreen.dealScreen("position1")
+
 # autopy.mouse.click()  # 单击u
 #
 # autopy.mouse.move(100, 20)  # 平滑移动鼠标（上面那个是瞬间的）

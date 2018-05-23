@@ -149,3 +149,49 @@ def getOffsetValue_NPC(attr,attr2):
         return attr
     else:
         return "null"
+
+def taskReturn(name):
+    imsrc = ac.imread("D:\\zhaoyq\\screen\\allScreen.png")
+    imobj = ac.imread("D:\\zhaoyq\\screen\\"+name+"\\"+"return.png")
+    # find the match position
+    pos = ac.find_template(imsrc, imobj)
+    if pos is None:
+        return "none"
+    elif pos:
+        circle_center_pos = list(pos['result'])
+        x = int(circle_center_pos[0])
+        y = int(circle_center_pos[1])
+        attr = [x, y]
+        return attr
+    else:
+        return "null"
+def taskRight():
+    imsrc = ac.imread("D:\\zhaoyq\\screen\\allScreen.png")
+    imobj = ac.imread("D:\\zhaoyq\\screen\\"+"right.png")
+    # find the match position
+    pos = ac.find_template(imsrc, imobj)
+    if pos is None:
+        return "none"
+    elif pos:
+        circle_center_pos = list(pos['result'])
+        x = int(circle_center_pos[0])
+        y = int(circle_center_pos[1])
+        attr = [x, y]
+        return attr
+    else:
+        return "null"
+def isLocation(attr1,attr2):
+    imsrc = ac.imread("D:\\zhaoyq\\screen\\allScreen.png")
+    imobj = ac.imread("D:\\zhaoyq\\screen\\"+"right.png")
+    # find the match position
+    pos = ac.find_template(imsrc, imobj)
+    if pos is None:
+        return "none"
+    elif pos:
+        circle_center_pos = list(pos['result'])
+        x = int(circle_center_pos[0])
+        y = int(circle_center_pos[1])
+        attr = [x, y]
+        return attr
+    else:
+        return "null"

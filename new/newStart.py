@@ -133,7 +133,7 @@ def newPlayerStart():
     fiter.isWalking()
     fiter.moveAndClick(185+random.randint(-20,20), 328)
     fiter.isAuto()
-    # 点击第十七个任务 npc小小
+    # 点击第十七个任务 npc 小小
     time.sleep(1)
     fiter.moveAndClick(50+random.randint(0,5), 240)
     fiter.isWalking()
