@@ -1,3 +1,3 @@
 # test
 def shimenStart():
-    print("")
+    print("开始")
