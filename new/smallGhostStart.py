@@ -177,6 +177,10 @@ def xuncha():
                         fiter.moveAndClick(attr45[0] + random.randint(10, 20) + 200 - 20,
                                            attr45[1] + random.randint(0, 10) + 200 - 50)
                         break
+            getScreen.window_capture("D:\\zhaoyq\\screen\\allScreen.png")
+            dealScreen.dealPicture_NPC("smallGhost")
+            attr44 = getOffset.getOffsetValue_NPC("smallGhost", "zhongkui")
+            fiter.moveAndClick(attr44[0] + random.randint(10, 20) + 200-20, attr44[1] + random.randint(0, 10) + 200 - 50)
             time.sleep(1)
             while True:
                 catchScreen.catchAllScreen()

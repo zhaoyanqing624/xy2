@@ -195,3 +195,4 @@ def isLocation(attr1,attr2):
         return attr
     else:
         return "null"
+

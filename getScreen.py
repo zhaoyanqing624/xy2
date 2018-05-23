@@ -26,6 +26,7 @@ def window_capture(filename):
   saveDC.BitBlt((0, 0), (400, 400), mfcDC, (200, 200), win32con.SRCCOPY)
   saveBitMap.SaveBitmapFile(saveDC, filename)
 
+
 def window_capture_right(filename):
   hwnd = 0 # 窗口的编号，0号表示当前活跃窗口
   # 根据窗口句柄获取窗口的设备上下文DC（Divice Context）
@@ -48,6 +49,7 @@ def window_capture_right(filename):
   # 截取从左上角（0，0）长宽为（w，h）的图片
   saveDC.BitBlt((0, 0), (500, 500), mfcDC, (300, 300), win32con.SRCCOPY)
   saveBitMap.SaveBitmapFile(saveDC, filename)
+
 
 
 

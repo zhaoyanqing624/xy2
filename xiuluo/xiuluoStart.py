@@ -17,5 +17,6 @@ def xiuluoStart():
     print(attr)
     autopy.mouse.move(attr[0] + 200, attr[1] - 50 + 200)
     # autopy.mouse.click()  # 单击
+
     getScreen.window_capture("D")
-xiuluoStart()
+

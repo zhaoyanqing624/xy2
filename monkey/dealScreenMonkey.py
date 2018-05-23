@@ -12,3 +12,4 @@ def dealMonkeyPicture():
     # cv2.imshow('res',res)
     # //cv2.imshow('img',img)
     cv2.imwrite('D:\\zhaoyq\\screen\\monkey\\allScreen.png',res, [int(cv2.IMWRITE_PNG_COMPRESSION), 1])
+

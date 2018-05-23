@@ -1,0 +1,3 @@
+# test
+def shimenStart():
+    print("")
