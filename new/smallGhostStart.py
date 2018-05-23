@@ -1,13 +1,10 @@
 import autopy3 as autopy
 import time
 import random
-import catchScreen
+from screenFilter import catchScreen, dealScreen, getInfoFromScreen
 import getScreen
 import getOffset
-import getInfoFromScreen
 import fiter
-import dealScreen
-from new import score as scoreShitu
 
 x = 0
 y = 0

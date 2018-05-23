@@ -1,9 +1,7 @@
 import autopy3 as autopy
 import time
-import catchScreen
+from screenFilter import catchScreen, dealScreen, getInfoFromScreen
 import getOffset
-import getInfoFromScreen
-import dealScreen
 import fiter
 import random
 # 左键快速点击
@@ -85,7 +83,7 @@ def isWalking():
             catchScreen.catchScreen(30, 65, 140, 85, "position")
         else:
             catchScreen.catchScreen(30, 65, 140, 85, "position0")
-        degree = dealScreen.similarPicture("position","position0")
+        degree = dealScreen.similarPicture("position", "position0")
         if (degree == 0):
             break
         a += 1

@@ -1,8 +1,7 @@
 import autopy3 as autopy
 import time
-import catchScreen
+from screenFilter import catchScreen, getInfoFromScreen
 import getOffset
-import getInfoFromScreen
 import fiter
 def homeTaskStart():
     autopy.mouse.move(397, 390)  # 平滑移动鼠标（上面那个是瞬间的）

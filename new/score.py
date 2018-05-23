@@ -1,5 +1,5 @@
 import getOffset
-import catchScreen
+from screenFilter import catchScreen
 import fiter
 import time
 def score():

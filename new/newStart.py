@@ -1,9 +1,8 @@
-import catchScreen
+from screenFilter import catchScreen
 import getOffset
 import random
 import time
 import autopy3 as autopy
-import getScreen
 import fiter
 
 def newPlayerStart():

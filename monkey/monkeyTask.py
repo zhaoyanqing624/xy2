@@ -1,10 +1,7 @@
 import autopy3 as autopy
 import time
-import random
-import catchScreen
 import getScreen
 import getOffset
-import getInfoFromScreen
 import fiter
 from monkey import dealScreenMonkey
 def monkeyTaskStart():

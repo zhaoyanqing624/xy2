@@ -1,6 +1,6 @@
 
 from PIL import ImageGrab
-import dealScreen
+from screenFilter import dealScreen
 import time
 def catchAllScreen():
     time.sleep(1)

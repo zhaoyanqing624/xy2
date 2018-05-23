@@ -1,7 +1,6 @@
-import autopy3 as autopy,PIL
+import autopy3 as autopy
 import time
-import catchScreen
-import getInfoFromScreen
+from screenFilter import catchScreen, getInfoFromScreen
 import getOffset
 def home_mouse():
     # autopy.mouse.smooth_move(400, 350)  # 平滑移动鼠标（上面那个是瞬间的）

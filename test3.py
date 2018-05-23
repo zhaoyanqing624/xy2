@@ -1,9 +1,8 @@
-import autopy3 as autopy,PIL
 import time
-import  catchScreen
+from screenFilter import catchScreen, getInfoFromScreen
 import fiter
-import getInfoFromScreen
-import getOffset
+
+
 # 545 285 （0，+10）
 # autopy.mouse.move(352+5, 412+10)
 

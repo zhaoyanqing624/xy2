@@ -1,12 +1,9 @@
 import autopy3 as autopy
-import time
-import random
-import catchScreen
 import getScreen
 import getOffset
-import getInfoFromScreen
-import fiter
-import dealScreen
+from screenFilter import dealScreen
+
+
 def xiuluoStart():
     autopy.mouse.move(100, 20)  # 平滑移动鼠标（上面那个是瞬间的）
     autopy.mouse.click()  # 单击

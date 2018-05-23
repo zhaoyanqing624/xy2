@@ -1,18 +1,9 @@
-import catchScreen
-import getOffset
-import random
+from screenFilter import catchScreen, dealScreen
 import time
 import autopy3 as autopy
-import dealScreen
 
-import getInfoFromScreen
-import fiter
-from monkey import dealScreenMonkey as deal2
-import getScreen
 catchScreen.catchAllScreen()
 
-import fiter
-from monkey import dealScreenMonkey as deal2
 # catchScreen.catchAllScreen()
 
 # deal2.dealMonkeyPicture()
