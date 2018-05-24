@@ -72,7 +72,10 @@ def smallGhostStart():
                 time.sleep(1)
         else:
             print("需要移动")
-            autopy.mouse.move(attr[0]+random.randint(-10,10), attr[1])
+            if(attr[0]>500):
+                autopy.mouse.move(350+random.randint(-10,10), 370)
+            else:
+                autopy.mouse.move(attr[0] + random.randint(-10, 10), attr[1])
             autopy.mouse.click(autopy.mouse.RIGHT_BUTTON)
             fiter.isWalking()
             time.sleep(0.5)
