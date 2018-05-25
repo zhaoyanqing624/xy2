@@ -134,6 +134,37 @@ def getOffsetValue_smallGhostStart():
         return attr
     else:
         return "null"
+def getOffsetValue_tiantingStart():
+    imsrc = ac.imread("D:\\zhaoyq\\screen\\allScreen.png")
+    imobj = ac.imread("D:\\zhaoyq\\screen\\tianting\\start.png")
+    # find the match position
+    pos = ac.find_template(imsrc, imobj)
+    if pos is None:
+        return "none"
+    elif pos:
+        circle_center_pos = list(pos['result'])
+        x = int(circle_center_pos[0])
+        y = int(circle_center_pos[1])
+        attr = [x, y]
+        return attr
+    else:
+        return "null"
+
+def getOffsetValue_tiantingStart1():
+    imsrc = ac.imread("D:\\zhaoyq\\screen\\allScreen.png")
+    imobj = ac.imread("D:\\zhaoyq\\screen\\tianting\\tianting1.png")
+    # find the match position
+    pos = ac.find_template(imsrc, imobj)
+    if pos is None:
+        return "none"
+    elif pos:
+        circle_center_pos = list(pos['result'])
+        x = int(circle_center_pos[0])
+        y = int(circle_center_pos[1])
+        attr = [x, y]
+        return attr
+    else:
+        return "null"
 def getOffsetValue_NPC(attr,attr2):
     imsrc = ac.imread("D:\\zhaoyq\\screen\\"+attr+"\\allScreen.png")
     imobj = ac.imread("D:\\zhaoyq\\screen\\"+attr+"\\"+attr2+".png")

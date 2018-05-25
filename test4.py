@@ -2,7 +2,7 @@ import cv2
 import random
 import cv2
 import numpy as np
-img=cv2.imread('E:\\1.png',cv2.IMREAD_COLOR)
+img=cv2.imread('E:\\tianting1.png',cv2.IMREAD_COLOR)
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 lower_blue=np.array([0, 60, 10])
 upper_blue=np.array([50, 255, 255])
