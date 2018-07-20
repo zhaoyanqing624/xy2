@@ -39,7 +39,7 @@ def dealScreen(addr):
     enh_sha = ImageEnhance.Sharpness(image)
     sharpness = 3.0
     image_sharped = enh_sha.enhance(sharpness)
-    image.resize((300, 80), Image.ANTIALIAS).save("D:\\zhaoyq\\screen\\"+addr+"1.png", quality=95, dpi=(72, 72))
+    image.resize((1000, 550), Image.ANTIALIAS).save("D:\\zhaoyq\\screen\\"+addr+"1.png", quality=95, dpi=(72, 72))
     # image.save("D:\\zhaoyq\\screen\\test1.png")
 # 计算图片的相似度
 def similarPicture(attr1,attr2):

@@ -11,6 +11,11 @@ def catchScreen(x,y,w,h,addr):
     bbox = (x, y, w, h)
     im = ImageGrab.grab(bbox)
     im.save("D:\\zhaoyq\\screen\\"+addr+".png")
+    # dealScreen.dealScreen(addr)
+def catchScreen2(x, y, w, h, addr):
+    bbox = (x, y, w, h)
+    im = ImageGrab.grab(bbox)
+    im.save("D:\\zhaoyq\\screen\\" + addr + ".png")
     dealScreen.dealScreen(addr)
 def catchScreenTest(x,y,w,h):
     bbox = (x, y, w, h)
@@ -22,4 +27,3 @@ def catchScreenTest(x,y,w,h):
 # # im = im.resize((400, 200),Image.ANTIALIAS)
 # im.show()
 # im.save('D:\\zhaoyq\\train\\faction\\answer_2.png')
-catchAllScreen()
